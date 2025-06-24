@@ -1,15 +1,1 @@
-name: main
-on:
-  push:
 
-  schedule:
-    - cron: '*/5 * * * *'
-jobs:
-  build:
-
-    runs-on: windows-2019
-    steps:
-      - name: Check out repo        
-        uses: actions/checkout@v2
-      - run: |
-          ./OracleIPRanges/syncOracleIPRanges.ps1      
